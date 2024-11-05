@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/usr/local/bin:/usr/bin:/bin" // Explicitly add path to Ruby
+        PATH = "/home/skiptomy/.rvm/rubies/ruby-3.2.2/bin:$PATH"
     }
 
     stages {
