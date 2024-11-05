@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/usr/local/bin:/usr/bin:/bin" // Explicitly add path to Ruby
+    }
+
     stages {
         stage('Setup') {
             steps {
