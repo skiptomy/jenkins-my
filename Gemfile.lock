@@ -68,6 +68,7 @@ GEM
     tilt (2.4.0)
 
 PLATFORMS
+  arm64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
@@ -78,4 +79,4 @@ DEPENDENCIES
   sinatra
 
 BUNDLED WITH
-   2.4.10
+   2.5.22
