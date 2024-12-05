@@ -1,0 +1,22 @@
+# This config was automatically generated from your source code
+# Stacks detected: cicd:jenkins:.,deps:ruby:.
+version: 2.1
+orbs:
+  ruby: circleci/ruby@2.0.1
+jobs:
+  test-ruby:
+    # Install gems, run rspec tests
+    docker:
+      - image: cimg/ruby:3.2-node
+    environment:
+      RAILS_ENV: test
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run:
+          name: cucumber test
+          command: bundle exec cucumber
+workflows:
+  build-and-test:
+    jobs:
+      - test-ruby
